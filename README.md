@@ -40,8 +40,9 @@
 - Installare DiskGenius su Windows.
 - Aprire il programma, in alto aprire il menù "Tools" e poi su "Create WinPE Bootable USB Drive of DiskGenius".
 - Selezionare la pendrive in disuso precedentemente inserita e attendere l'installazione.
-- Aprire il percorso della pen drive ed estrarre il file "boot.wim" nella cartella nascosta /boot
-- Per comodità rinominare il file in DiskGenius.wim
+- Aprire il percorso della pen drive ed estrarre il file "boot.wim" nella cartella nascosta /boot.
+- Per comodità rinominare il file in DiskGenius.wim.
+- Rimuovere la pen drive e rimettere il supporto USB con Ventoy.
 
 - Scaricare il plugin wimboot da [questo link](https://github.com/ventoy/wimiso/releases)
 - Inserire il file img scaricato nella cartella ventoy presente nel supporto usb.
