@@ -23,7 +23,7 @@
 - Aprire l'eseguibile "VentoyPlugson.exe" e poi premere su start, si aprirà il browser
 - Sulla sinistra andare nella sezione "Auto Install Plugin"
 - Cliccare il tasto verde "Add"
-- Scegliere [image] se si vuole associare il file XML a una singola immagine; [Folder] Se invece si vuole associare a una cartella specifica e tutte le iso che contiene.
+- Scegliere [image] se si vuole associare il file XML a una singola immagine; [parent] Se invece si vuole associare a una cartella specifica e tutte le iso che contiene.
 - Come da istruzioni, nel primo campo mettere il percorso della cartella (o della iso) che va associata al file
 - Nel secondo campo invece inserire il percorso del file autounattend.xml, comprensivo del nome completo del file.
 - A quel punto premere "OK"
