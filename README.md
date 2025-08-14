@@ -66,7 +66,7 @@ Ecco ad esempio come creare una live iso persistente di Linux Mint (una delle di
 **FILE NECESSARI**
 - Iso live di Linux Mint scaricabile a [questo link](https://linuxmint.com/download.php)
 - Scaricare il file zip a [questo link](https://github.com/ventoy/backend/releases), contiene delle immagini pre-create di diverse dimensioni.
-- Estrarre dallo zip il file .dat adatto alla build Linux Mint. Secondo la tabella presente a [questo link](https://www.ventoy.net/en/plugin_persistence.html), Mint necessita il file col nome "casper-rw". In questo caso io scarico il file "persistence_ext4_4GB_casper-rw.dat".
+- Estrarre dallo zip il file .dat adatto alla build Linux Mint. Secondo la tabella presente a [questo link](https://www.ventoy.net/en/plugin_persistence.html), Mint necessita il file col nome "casper-rw". In questo caso io estraggo il file "persistence_ext4_4GB_casper-rw.dat".
   - "EXT4" è il formato consigliato.
   - "casper-rw" è la dicitura corretta per Linux Mint secondo la tabella vista prima.
   - "4GB" indica che il sistema persistente che andremo ad avviare sarà grande 4GB.
