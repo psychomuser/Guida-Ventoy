@@ -48,3 +48,31 @@
 - Inserire il file img scaricato nella cartella ventoy presente nel supporto usb.
 - Inserire il file precedentemente estratto "Diskgenius.wim" ("boot.wim" rinominato) all'interno del supporto USB come se fosse una iso eseguibile qualunque.
 - Adesso DiskGenius apparirà tra le opzioni di boot allo stesso modo delle altre iso.
+
+## Configurare una live iso persistente di linux
+
+Con Ventoy è possibile configurare una live iso persistente di Linux, che permette di salvare le modifiche effettuate all'interno come se fosse un sistema funzionante.
+Ecco ad esempio come creare una live iso persistente di Fedora KDE (una delle distro linux che fa uso di una live iso):
+
+### ESEMPIO: Inserire Fedora come live iso persistente
+
+**FILE NECESSARI**
+- Iso live di fedora scaricabile a [questo link](https://fedoraproject.org/it/kde/download)
+- Scaricare il file zip a [questo link](https://github.com/ventoy/backend/releases), contiene delle immagini precreate di diverse dimensioni.
+- Estrarre dallo zip il file .dat adatto alla build Fedora. Secondo la tabella presente a [questo link](https://www.ventoy.net/en/plugin_persistence.html), fedora necessita il file col nome "vtoycow". In questo caso io scarico il file "persistence_ext4_4GB_vtoycow.dat".
+  - "EXT4" è il formato consigliato.
+  - "vtoycow" è la dicitura corretta per Fedora secondo la tabella vista prima.
+  - "4GB" indica che il sistema persistente che andremo ad avviare sarà grande 4GB.
+
+**Nota:** La tabella vista prima, indica che per fedora va inserito il comando `selinux=0` nelle opzioni di avvio, mentre ci sono altre distro che sono più semplici come ubuntu o linux mint. Vedremo in seguito come risolvere con Fedora.
+
+**PROCEDIMENTO**
+- Inserire la iso di fedora all'interno del Supporto USB Ventoy (dove si preferisce).
+- Inserire il file "persistence_ext4_4GB_vtoycow.dat" nel Supporto USB Ventoy (per comodità ho creato l'ho inserito in una cartella chiamata "Fedora Persistence").
+- Aprire "VentoyPlugson" e cliccare su apri per aprire l'interfaccia web.
+- Sulla sinistra cliccare su "Persistence plugin" e poi il tasto verde "Add".
+- Si aprirà un popup, nel primo campo inserire il percordo della iso di fedora con incluso il nome del file iso.
+- Nel secondo campo inserire il percorso del file .dat con incluso il nome del file.
+- Cliccare su ok e la configurazione è terminata, tornare su VentoyPlugson e cliccare su "Stop" per chiudere.
+- Adesso è possibile avviare la iso di Fedora, selezionando facoltativamente l'opzione persistence associata.
+- 
