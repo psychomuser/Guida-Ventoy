@@ -56,7 +56,7 @@ Con Ventoy è possibile configurare un sistema persistente di Linux, che mantien
 Nella tabella presente in [questo link](https://www.ventoy.net/en/plugin_persistence.html), è possibile vedere quali sono le distro compatibili per questa procedura. 
 
 **Note:**
-- Non sono riuscito a far funzionare fedora, anche inserendo il comando "selinux=0" dall'avvio di GRUB, come indicato nella tabella.
+- Non sono riuscito a far funzionare fedora, neanche inserendo il comando "selinux=0" dall'avvio di GRUB, come indicato nella tabella.
 - Arch non utilizza una live iso, ho provato con Manjaro ma a quanto pare non è compatibile, non so con quale distro Arch si potrebbe fare.
 
 Ecco ad esempio come creare una live iso persistente di Linux Mint (una delle distro linux che fa uso di una live iso):
