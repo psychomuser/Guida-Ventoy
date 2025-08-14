@@ -68,10 +68,10 @@ Ecco ad esempio come creare una live iso persistente di Fedora KDE (una delle di
 
 **PROCEDIMENTO**
 - Inserire la iso di fedora all'interno del Supporto USB Ventoy (dove si preferisce).
-- Inserire il file "persistence_ext4_4GB_vtoycow.dat" nel Supporto USB Ventoy (per comodità ho creato l'ho inserito in una cartella chiamata "Fedora Persistence").
+- Inserire il file "persistence_ext4_4GB_vtoycow.dat" nel Supporto USB Ventoy (per comodità l'ho inserito in una cartella chiamata "Fedora Persistence").
 - Aprire "VentoyPlugson" e cliccare su apri per aprire l'interfaccia web.
 - Sulla sinistra cliccare su "Persistence plugin" e poi il tasto verde "Add".
-- Si aprirà un popup, nel primo campo inserire il percordo della iso di fedora con incluso il nome del file iso.
+- Si aprirà un popup, nel primo campo inserire il percorso della iso di fedora con incluso il nome del file iso.
 - Nel secondo campo inserire il percorso del file .dat con incluso il nome del file.
 - Cliccare su ok e la configurazione è terminata, tornare su VentoyPlugson e cliccare su "Stop" per chiudere.
 - Adesso è possibile avviare la iso di Fedora, selezionando facoltativamente l'opzione persistence associata.
