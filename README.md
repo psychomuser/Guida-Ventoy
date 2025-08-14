@@ -52,8 +52,8 @@
 
 ## Configurare l'avvio di un sistema Linux Persistente
 
-Con Ventoy è possibile configurare una live iso persistente di Linux, che permette di salvare le modifiche effettuate all'interno come se fosse un sistema funzionante.
-Nella tabella presente in [questo link](https://www.ventoy.net/en/plugin_persistence.html), è possibile vedere quali sono le distro compatibili. 
+Con Ventoy è possibile configurare un sistema persistente di Linux, che mantiene tutte le modifiche effettuate all'interno come un normale sistema operativo.
+Nella tabella presente in [questo link](https://www.ventoy.net/en/plugin_persistence.html), è possibile vedere quali sono le distro compatibili per questa procedura. 
 
 **Note:**
 - Non sono riuscito a far funzionare fedora, anche inserendo il comando "selinux=0" dall'avvio di GRUB, come indicato nella tabella.
