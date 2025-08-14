@@ -5,6 +5,7 @@
 - [Installazione](#installazione)
 - [Configurazione di script](#configurare-script-autounattendxml)
 - [Configurazione Avvio di Software](#configurare-lavvio-di-software-eseguibili)
+- [Configurare l'avvio di un sistema linux persistente](#configurare-lavvio-di-un-sistema-linux-persistente)
 
 ---
 
@@ -49,30 +50,33 @@
 - Inserire il file precedentemente estratto "Diskgenius.wim" ("boot.wim" rinominato) all'interno del supporto USB come se fosse una iso eseguibile qualunque.
 - Adesso DiskGenius apparirà tra le opzioni di boot allo stesso modo delle altre iso.
 
-## Configurare una live iso persistente di linux
+## Configurare l'avvio di un sistema Linux Persistente
 
 Con Ventoy è possibile configurare una live iso persistente di Linux, che permette di salvare le modifiche effettuate all'interno come se fosse un sistema funzionante.
-Ecco ad esempio come creare una live iso persistente di Fedora KDE (una delle distro linux che fa uso di una live iso):
+Nella tabella presente in [questo link](https://www.ventoy.net/en/plugin_persistence.html), è possibile vedere quali sono le distro compatibili. 
 
-### ESEMPIO: Inserire Fedora come live iso persistente
+**Note:**
+- Non sono riuscito a far funzionare fedora, anche inserendo il comando "selinux=0" dall'avvio di GRUB, come indicato nella tabella.
+- Arch non utilizza una live iso, ho provato con Manjaro ma a quanto pare non è compatibile, non so con quale distro Arch si potrebbe fare.
+
+Ecco ad esempio come creare una live iso persistente di Linux Mint (una delle distro linux che fa uso di una live iso):
+
+### ESEMPIO: Inserire la iso di Linux Mint come immagine persistente
 
 **FILE NECESSARI**
-- Iso live di fedora scaricabile a [questo link](https://fedoraproject.org/it/kde/download)
-- Scaricare il file zip a [questo link](https://github.com/ventoy/backend/releases), contiene delle immagini precreate di diverse dimensioni.
-- Estrarre dallo zip il file .dat adatto alla build Fedora. Secondo la tabella presente a [questo link](https://www.ventoy.net/en/plugin_persistence.html), fedora necessita il file col nome "vtoycow". In questo caso io scarico il file "persistence_ext4_4GB_vtoycow.dat".
+- Iso live di Linux Mint scaricabile a [questo link](https://linuxmint.com/download.php)
+- Scaricare il file zip a [questo link](https://github.com/ventoy/backend/releases), contiene delle immagini pre-create di diverse dimensioni.
+- Estrarre dallo zip il file .dat adatto alla build Linux Mint. Secondo la tabella presente a [questo link](https://www.ventoy.net/en/plugin_persistence.html), Mint necessita il file col nome "casper-rw". In questo caso io scarico il file "persistence_ext4_4GB_casper-rw.dat".
   - "EXT4" è il formato consigliato.
-  - "vtoycow" è la dicitura corretta per Fedora secondo la tabella vista prima.
+  - "casper-rw" è la dicitura corretta per Linux Mint secondo la tabella vista prima.
   - "4GB" indica che il sistema persistente che andremo ad avviare sarà grande 4GB.
 
-**Nota:** La tabella vista prima, indica che per fedora va inserito il comando `selinux=0` nelle opzioni di avvio, mentre ci sono altre distro che sono più semplici come ubuntu o linux mint. Vedremo in seguito come risolvere con Fedora.
-
 **PROCEDIMENTO**
-- Inserire la iso di fedora all'interno del Supporto USB Ventoy (dove si preferisce).
-- Inserire il file "persistence_ext4_4GB_vtoycow.dat" nel Supporto USB Ventoy (per comodità l'ho inserito in una cartella chiamata "Fedora Persistence").
+- Inserire la iso di Mint all'interno del Supporto USB Ventoy (dove si preferisce).
+- Inserire il file "persistence_ext4_4GB_casper-rw.dat" nel Supporto USB Ventoy (per comodità l'ho inserito in una cartella chiamata "Mint Persistence").
 - Aprire "VentoyPlugson" e cliccare su apri per aprire l'interfaccia web.
 - Sulla sinistra cliccare su "Persistence plugin" e poi il tasto verde "Add".
-- Si aprirà un popup, nel primo campo inserire il percorso della iso di fedora con incluso il nome del file iso.
+- Si aprirà un popup, nel primo campo inserire il percorso della iso di Mint con incluso il nome del file iso.
 - Nel secondo campo inserire il percorso del file .dat con incluso il nome del file.
 - Cliccare su ok e la configurazione è terminata, tornare su VentoyPlugson e cliccare su "Stop" per chiudere.
-- Adesso è possibile avviare la iso di Fedora, selezionando facoltativamente l'opzione persistence associata.
-- 
+- Adesso è possibile avviare la iso di Mint come immagine persistente, selezionando facoltativamente l'opzione persistence associata.
