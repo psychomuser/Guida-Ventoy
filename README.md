@@ -2,10 +2,9 @@
 
 ## Indice
 
-- Prova
-- prova2
-- prova3
-- prova4
+- [Installazione](#installazione)
+- [Configurazione di script](#configurare-script-autounattendxml)
+- [Configurazione Avvio di Software](#configurare-lavvio-di-software-eseguibili)
 
 ---
 
@@ -29,7 +28,7 @@
 - A quel punto premere "OK"
 - La configurazione è terminata, tornare su VentoyPlugson e cliccare "STOP"
 
-## Configurare l'avvio di software eseguibile (Es. Diskgenius)
+## Configurare l'avvio di software eseguibili 
 
 - Alcuni software come clonezilla o gparted permettono di scaricare direttamente la iso, in tal caso basta inserire la iso su ventoy.
 - Altri programmi come DiskGenius o AOMEI Partition invece, necessitano l'installazione del programma su windows/linux, e dalle opzioni del programma permettono di creare una pen drive bootabile WinPE. Ecco ad esempio come rendere eseguibile DiskGenius con Ventoy:
@@ -45,5 +44,6 @@
 - Per comodità rinominare il file in DiskGenius.wim
 
 - Scaricare il plugin wimboot da [questo link](https://github.com/ventoy/wimiso/releases)
-- Inserire il file img nella cartella ventoy presente nel supporto usb.
-- Inserire il file precedentemente estratto "Diskgenius.wim" ("boot.wim" rinominato) all'interno del supporto USB come se fosse una iso eseguibile.
+- Inserire il file img scaricato nella cartella ventoy presente nel supporto usb.
+- Inserire il file precedentemente estratto "Diskgenius.wim" ("boot.wim" rinominato) all'interno del supporto USB come se fosse una iso eseguibile qualunque.
+- Adesso DiskGenius apparirà tra le opzioni di boot allo stesso modo delle altre iso.
